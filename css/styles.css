@@ -1,6 +1,7 @@
 .header {
     background-color: #f4f5f6;
     padding-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .header .container {
@@ -155,7 +156,8 @@
 footer{
 	  background: #f4f5f6;
     border-top: .1rem solid #d1d1d1;
-    padding-top: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 footer>section>img{
@@ -173,7 +175,8 @@ footer>section>p:last-child{
 	text-align: center;
 }
 
-.emp{
+.emp,
+.lic{
 	margin-bottom: 2rem;
 }
 

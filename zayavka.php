@@ -1,3 +1,20 @@
+<?php 
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$tel = $_POST['tel'];
+$town = $_POST['town'];
+
+$formcontent=" $name \n $tel \n $town \n $email \n ";
+// $recipient = "pbiot@mail.ru, pbiotperm@mail.ru";
+$recipient = "pride.ots@gmail.com";
+$subject = "Mail from prombez-perm.ru (training)";
+$mailheader = "From: $email \r\n";
+
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+
+$ok_text = <<<EOF
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,7 +25,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
-	<title>Контактные реквизиты</title>
+	<title>Заявка отправлена</title>
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 	<!-- CSS Reset -->
@@ -52,60 +69,11 @@
 		<header class="header">
 			<section class="container">
 				<img src="img/logo.png" alt="logo" class="">
-				<h1 class="title">Контактные реквизиты</h1>
-				<a class="button" href="./form.html" title="Заявка на обучение">Заявка на обучение</a>
+				<h1 class="title">Верхнекамский технический институт</h1>
+				<p class="description">Ваша заявка принята, в ближайшее время с вами свяжется наш представитель</p>
+				<a class="button" href="./index.html" title="Вернуться на главную">Вернуться на главную</a>
 			</section>
 		</header>
-		<section class="container" id="about">
-			<p>	
-				Для того, чтобы оставить заявку или задать интересующие Вас вопросы, свяжитесь с нами по телефону или отправьте запрос по электронной почте.
-			</p>
-		</section>
-		<section class="container" id="contacts">
-			<strong>Наш адрес:</strong>
-			<p>
-				г. Соликамск, Черняховского 4А 
-			</p>
-			<p>
-				г. Пермь, Подлесная 43А 
-			</p>
-			<strong>Наши телефоны:</strong>
-				<p>Соликамск:</p>
-				<ul>
-					<li>Телефон <a href="tel: 83425365001"> +7 (34253) 6-50-01</a></li>
-					<li>Факс <a href="tel: 83425365002">+7 (34253) 6-50-02</a></li>
-					<li>Начальник методического отдела <a href="tel: 83425365003">+7 (34253) 6-50-03</a></li>
-					<li>Методический отдел <a href="tel: 83425365004"> +7 (34253) 6-50-04, +7-922-36-35-075</a></li>
-					<li>Спец. оценка условий труда <a href="tel: 83425365007">+7 (34253) 6-50-07</a></li>
-					<li>Сметно-договорной отдел <a href="tel: 83425365006">+7 (34253) 6-50-06</a></li>
-				</ul>
-				<p>Пермь:</p>
-				<ul>
-					<li>Телефон <a href="tel: 8342258070"> +7 (342) 258-00-70</a></li>
-					<li>Телефон <a href="tel: 8342258071">+7 (342) 258-00-71</a></li>
-					<li>Сот. тел. <a href="tel: 89223353703">+7 (922) 33-53-703</a></li>
-				</ul>
-
-				<strong>Адреса Электронной почты:</strong>
-				<ul>
-					<li>Основной: <a href="mailto: mail@prombez-perm.ru">mail@prombez-perm.ru</a> </li>
-					<li>Методический отдел: <a href="mailto: pbiot@mail.ru">pbiot@mail.ru</a>; <a href="mailto: pbiotperm@mail.ru">pbiotperm@mail.ru </a> </li>
-					<li>Спец. оценка условий труда: <a href="mailto: soutsol@mail.ru">soutsol@mail.ru</a></li>
-					<li>Сметно-договорной отдел: <a href="mailto: sdo-cepb@bk.ru">sdo-cepb@bk.ru</a></li>
-					<li>Центр экспертизы промышленной безопасности: <a href="mailto: cepb@bk.ru">cepb@bk.ru </a> </li>
-				</ul>
-
-				<strong>График работы:</strong>
-				<p>Соликамск: <br>
-				Понедельник-Пятница: 08.00-17.00 <br>
-				Суббота-Воскресенье: Выходные дни <br>
-				Обед: 12.00-13.00 </p>
-
-				<p>Пермь: <br>
-				Понедельник-Пятница: 08.30-17.30  <br>
-				Суббота-Воскресенье: Выходные дни <br>
-				Обед: 12.00-13.00</p>
-		</section>
 		<footer class="footer">
 			<section class="container">
 				<img src="img/logo.png" class="float-left">
@@ -142,3 +110,8 @@
 	</script>
 </body>
 </html>
+EOF;
+
+echo $ok_text;
+
+?>
