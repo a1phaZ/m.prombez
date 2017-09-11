@@ -168,3 +168,15 @@ footer>section>img{
 footer>section>p:last-child{
 	margin-bottom: 0;
 }
+
+.text-center{
+	text-align: center;
+}
+
+.emp{
+	margin-bottom: 2rem;
+}
+
+#form{
+	padding-top: 6rem;
+}
