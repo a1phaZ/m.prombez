@@ -183,3 +183,7 @@ footer>section>p:last-child{
 #form{
 	padding-top: 6rem;
 }
+
+.fl-wrap{
+    flex-wrap: wrap;
+}
