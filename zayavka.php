@@ -4,10 +4,10 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $tel = $_POST['tel'];
 $town = $_POST['town'];
+$book = $_POST['book'];
 
-$formcontent=" $name \n $tel \n $town \n $email \n ";
-// $recipient = "pbiot@mail.ru, pbiotperm@mail.ru";
-$recipient = "pride.ots@gmail.com";
+$formcontent=" $name \n $tel \n $town \n $email \n $book \n";
+$recipient = "pbiot@mail.ru, pbiotperm@mail.ru";
 $subject = "Mail from prombez-perm.ru (training)";
 $mailheader = "From: $email \r\n";
 
@@ -58,7 +58,7 @@ $ok_text = <<<EOF
 									<a class="popover-link" href="./photo.html" title="Фотоальбом">Фотоальбом</a>
 									<a class="popover-link" href="./contacts.html" title="Контакты">Контакты</a>
 									<a class="popover-link" href="./form.html" title="Заявка">Заявка</a>
-									<a class="popover-link" href="#" title="Учебные материалы">Учебные материалы</a>
+									<a class="popover-link" href="./buy.html" title="Учебные материалы">Учебные материалы</a>
 								</li>
 							</ul>
 						</div>
